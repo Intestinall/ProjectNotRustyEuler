@@ -1,6 +1,7 @@
 use itertools::Itertools;
 use std::cmp::Reverse;
 
+#[allow(dead_code)]
 pub fn problem_004() -> u64 {
     let mut vec: Vec<(u64, u64)> = (100..1000).rev().tuple_combinations().collect();
     vec.sort_unstable_by_key(|t| Reverse(t.0 + t.1));

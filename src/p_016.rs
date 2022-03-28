@@ -36,6 +36,7 @@ fn big_pow(base_n: u64, p: u64) -> Vec<u64> {
     digits
 }
 
+#[allow(dead_code)]
 pub fn problem_016() -> u64 {
     big_pow(2, 1000).iter().sum()
 }

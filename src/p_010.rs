@@ -9,6 +9,7 @@ fn is_prime(n: u64) -> bool {
     true
 }
 
+#[allow(dead_code)]
 pub fn problem_010() -> u64 {
     let s: u64 = (11..2_000_000).step_by(2).filter(|n| is_prime(*n)).sum();
     2 + 3 + 5 + 7 + s

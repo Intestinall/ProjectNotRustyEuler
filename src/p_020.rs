@@ -22,6 +22,7 @@ fn explode_carry(mut digits: Vec<u64>) -> Vec<u64> {
     digits
 }
 
+#[allow(dead_code)]
 pub fn problem_020() -> u64 {
     let mut number: Vec<u64> = vec![1];
 

@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn problem_012() -> u64 {
     let mut n: u64 = 1;
     let mut incrementer = 2;

@@ -20,7 +20,7 @@ pub fn run_problem(problem_id: u16, f: fn() -> u64, answer: u64) {
         }
         false => {
             println!(
-                "[{}] P{:03} => expected {}, got {}",
+                "[{}]  P{:03} => expected {}, got {}",
                 "FAILED".red(),
                 problem_id,
                 answer,

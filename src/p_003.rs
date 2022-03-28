@@ -18,6 +18,7 @@ fn is_prime(n: u64) -> bool {
     true
 }
 
+#[allow(dead_code)]
 pub fn problem_003() -> u64 {
     let mut n: u64 = 600851475143;
     let mut found_primes: Vec<u64> = vec![2, 3];

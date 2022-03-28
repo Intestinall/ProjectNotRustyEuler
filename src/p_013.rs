@@ -119,6 +119,7 @@ fn push_in_deque(vn: &mut VecDeque<u64>, n: u64) {
     }
 }
 
+#[allow(dead_code)]
 pub fn problem_013() -> u64 {
     let numbers = get_input_numbers();
     let number_size = numbers[0].len();

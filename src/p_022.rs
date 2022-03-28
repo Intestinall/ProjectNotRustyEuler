@@ -1,6 +1,7 @@
 use std::fs;
 use std::path::Path;
 
+#[allow(dead_code)]
 pub fn problem_022() -> u64 {
     let path = Path::new("files/p022_names.txt").canonicalize().unwrap();
     let data = fs::read_to_string(path).unwrap();

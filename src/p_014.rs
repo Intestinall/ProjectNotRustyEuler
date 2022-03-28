@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn problem_014() -> u64 {
     let mut max_chain_size: u64 = 0;
     let mut max_n: u64 = 0;

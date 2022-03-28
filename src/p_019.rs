@@ -2,6 +2,7 @@ fn is_leap_year(year: u64) -> bool {
     year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)
 }
 
+#[allow(dead_code)]
 pub fn problem_019() -> u64 {
     let mut sunday_count = 0;
     let mut current_week_day = 1;

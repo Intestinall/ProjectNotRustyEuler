@@ -9,6 +9,7 @@ fn is_prime(n: u64) -> bool {
     true
 }
 
+#[allow(dead_code)]
 pub fn problem_007() -> u64 {
     let mut prime_count = 4;
     let mut n = 11;

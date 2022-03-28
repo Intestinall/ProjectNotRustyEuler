@@ -1,7 +1,6 @@
 [package]
 name = "project_not_rusty_euler"
 version = "0.1.0"
-edition = "2021"
 
 [dependencies]
 itertools = "0.10.1"

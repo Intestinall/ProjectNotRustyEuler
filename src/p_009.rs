@@ -1,5 +1,6 @@
 use itertools::Itertools;
 
+#[allow(dead_code)]
 pub fn problem_009() -> u64 {
     let (a, b, c) = (1u64..1000)
         .tuple_combinations::<(_, _, _)>()
