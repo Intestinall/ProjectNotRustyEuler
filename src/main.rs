@@ -18,6 +18,7 @@ mod p_017;
 mod p_018;
 mod p_019;
 mod p_020;
+mod p_021;
 mod p_022;
 mod utils;
 
@@ -62,6 +63,8 @@ use p_019::problem_019;
 #[allow(unused_imports)]
 use p_020::problem_020;
 #[allow(unused_imports)]
+use p_021::problem_021;
+#[allow(unused_imports)]
 use p_022::problem_022;
 
 use crate::utils::run_problem;
@@ -89,5 +92,6 @@ fn main() {
     run_problem(18, problem_018, 1074);
     run_problem(19, problem_019, 171);
     run_problem(20, problem_020, 648);
+    run_problem(21, problem_021, 31626);
     run_problem(22, problem_022, 871198282);
 }
