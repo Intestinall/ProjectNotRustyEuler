@@ -20,6 +20,7 @@ mod p_019;
 mod p_020;
 mod p_021;
 mod p_022;
+mod p_023;
 mod utils;
 
 #[allow(unused_imports)]
@@ -66,6 +67,8 @@ use p_020::problem_020;
 use p_021::problem_021;
 #[allow(unused_imports)]
 use p_022::problem_022;
+#[allow(unused_imports)]
+use p_023::problem_023;
 
 use crate::utils::run_problem;
 extern crate colored;
@@ -94,4 +97,5 @@ fn main() {
     run_problem(20, problem_020, 648);
     run_problem(21, problem_021, 31626);
     run_problem(22, problem_022, 871198282);
+    run_problem(23, problem_023, 4179871);
 }
