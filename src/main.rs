@@ -22,6 +22,7 @@ mod p_021;
 mod p_022;
 mod p_023;
 mod p_024;
+mod p_025;
 mod utils;
 
 #[allow(unused_imports)]
@@ -72,10 +73,14 @@ use p_022::problem_022;
 use p_023::problem_023;
 #[allow(unused_imports)]
 use p_024::problem_024;
+#[allow(unused_imports)]
+use p_025::problem_025;
 
 use crate::utils::run_problem;
 extern crate colored;
 extern crate itertools;
+extern crate num_bigint;
+extern crate num_traits;
 
 fn main() {
     run_problem(1, problem_001, 233168);
@@ -102,4 +107,5 @@ fn main() {
     run_problem(22, problem_022, 871198282);
     run_problem(23, problem_023, 4179871);
     run_problem(24, problem_024, 2783915460);
+    run_problem(25, problem_025, 4782);
 }

@@ -5,6 +5,8 @@ version = "0.1.0"
 [dependencies]
 itertools = "0.10.1"
 colored = "2"
+num-bigint = "0.4"
+num-traits = "0.2"
 
 [profile.release]
 lto = "fat"
