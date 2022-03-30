@@ -1,7 +1,7 @@
 use colored::*;
 use std::time::Instant;
 
-pub fn run_problem(problem_id: u16, f: fn() -> u64, answer: u64) {
+pub fn run_problem(problem_id: u16, f: fn() -> i128, answer: i128) {
     let now = Instant::now();
     let result = f();
     match result == answer {

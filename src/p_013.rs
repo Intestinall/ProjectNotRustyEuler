@@ -1,7 +1,7 @@
 use itertools::Itertools;
 use std::collections::VecDeque;
 
-fn get_input_numbers() -> Vec<Vec<u64>> {
+fn get_input_numbers() -> Vec<Vec<i128>> {
     "37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
 74324986199524741059474233309513058123726617309629
@@ -106,13 +106,13 @@ fn get_input_numbers() -> Vec<Vec<u64>> {
         .map(|x| {
             x.to_owned()
                 .chars()
-                .map(|c| c.to_digit(10).unwrap() as u64)
+                .map(|c| c.to_digit(10).unwrap() as i128)
                 .collect()
         })
         .collect()
 }
 
-fn push_in_deque(vn: &mut VecDeque<u64>, n: u64) {
+fn push_in_deque(vn: &mut VecDeque<i128>, n: i128) {
     vn.push_back(n);
     if vn.len() > 10 {
         vn.pop_front().unwrap();
@@ -120,14 +120,14 @@ fn push_in_deque(vn: &mut VecDeque<u64>, n: u64) {
 }
 
 #[allow(dead_code)]
-pub fn problem_013() -> u64 {
+pub fn problem_013() -> i128 {
     let numbers = get_input_numbers();
     let number_size = numbers[0].len();
-    let mut last_ten_numbers: VecDeque<u64> = VecDeque::with_capacity(11);
-    let mut carry: u64 = 0;
+    let mut last_ten_numbers: VecDeque<i128> = VecDeque::with_capacity(11);
+    let mut carry: i128 = 0;
 
     for i in 0..number_size {
-        let sum_col = numbers.iter().map(|v| v[number_size - i - 1]).sum::<u64>();
+        let sum_col = numbers.iter().map(|v| v[number_size - i - 1]).sum::<i128>();
         let sum_col_with_carry = sum_col + carry;
 
         carry = sum_col_with_carry / 10;

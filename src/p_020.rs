@@ -1,4 +1,4 @@
-fn explode_carry(mut digits: Vec<u64>) -> Vec<u64> {
+fn explode_carry(mut digits: Vec<i128>) -> Vec<i128> {
     let max_index = digits.len() - 1;
 
     for i in 0..digits.len() {
@@ -23,14 +23,14 @@ fn explode_carry(mut digits: Vec<u64>) -> Vec<u64> {
 }
 
 #[allow(dead_code)]
-pub fn problem_020() -> u64 {
-    let mut number: Vec<u64> = vec![1];
+pub fn problem_020() -> i128 {
+    let mut number: Vec<i128> = vec![1];
 
-    for n in 1u64..=100 {
+    for n in 1i128..=100 {
         for e in &mut number {
             *e *= n;
         }
         number = explode_carry(number);
     }
-    number.iter().sum::<u64>()
+    number.iter().sum::<i128>()
 }

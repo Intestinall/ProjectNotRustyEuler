@@ -1,6 +1,6 @@
 use std::cmp;
 
-fn get_tree() -> Vec<Vec<u64>> {
+fn get_tree() -> Vec<Vec<i128>> {
     let string_tree = "75
     95 64
     17 47 82
@@ -21,13 +21,13 @@ fn get_tree() -> Vec<Vec<u64>> {
         .map(|l| {
             l.trim()
                 .split_whitespace()
-                .map(|x| x.parse::<u64>().unwrap())
+                .map(|x| x.parse::<i128>().unwrap())
                 .collect()
         })
         .collect()
 }
 
-fn navigate(tree: &[Vec<u64>], i: usize, j: usize) -> u64 {
+fn navigate(tree: &[Vec<i128>], i: usize, j: usize) -> i128 {
     if i < tree.len() - 1 {
         let left_part = navigate(tree, i + 1, j);
         let right_part = navigate(tree, i + 1, j + 1);
@@ -39,7 +39,7 @@ fn navigate(tree: &[Vec<u64>], i: usize, j: usize) -> u64 {
 }
 
 #[allow(dead_code)]
-pub fn problem_018() -> u64 {
+pub fn problem_018() -> i128 {
     let tree = get_tree();
     navigate(&tree, 0, 0)
 }

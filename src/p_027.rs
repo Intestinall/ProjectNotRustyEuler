@@ -10,15 +10,7 @@ fn is_prime(n: i128) -> bool {
 }
 
 #[allow(dead_code)]
-pub fn problem_007() -> i128 {
-    let mut prime_count = 4;
-    let mut n = 11;
-
-    while prime_count < 10001 {
-        if is_prime(n) {
-            prime_count += 1
-        }
-        n += 2;
-    }
-    n - 2
+pub fn problem_027() -> i128 {
+    let _v: Vec<i128> = (11..10_000).step_by(2).filter(|n| is_prime(*n)).collect();
+    0
 }

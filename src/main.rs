@@ -23,6 +23,7 @@ mod p_022;
 mod p_023;
 mod p_024;
 mod p_025;
+mod p_027;
 mod p_055;
 mod utils;
 
@@ -77,6 +78,8 @@ use p_024::problem_024;
 #[allow(unused_imports)]
 use p_025::problem_025;
 #[allow(unused_imports)]
+use p_027::problem_027;
+#[allow(unused_imports)]
 use p_055::problem_055;
 
 use crate::utils::run_problem;
@@ -86,30 +89,31 @@ extern crate num_bigint;
 extern crate num_traits;
 
 fn main() {
-    run_problem(1, problem_001, 233168);
-    run_problem(2, problem_002, 4613732);
-    run_problem(3, problem_003, 6857);
-    run_problem(4, problem_004, 906609);
-    run_problem(5, problem_005, 232792560);
-    run_problem(6, problem_006, 25164150);
-    run_problem(7, problem_007, 104743);
-    run_problem(8, problem_008, 23514624000);
-    run_problem(9, problem_009, 31875000);
-    run_problem(10, problem_010, 142913828922);
-    run_problem(11, problem_011, 70600674);
-    run_problem(12, problem_012, 76576500);
-    run_problem(13, problem_013, 5537376230);
-    run_problem(14, problem_014, 837799);
-    run_problem(15, problem_015, 137846528820);
-    run_problem(16, problem_016, 1366);
-    run_problem(17, problem_017, 21124);
-    run_problem(18, problem_018, 1074);
-    run_problem(19, problem_019, 171);
-    run_problem(20, problem_020, 648);
-    run_problem(21, problem_021, 31626);
-    run_problem(22, problem_022, 871198282);
-    run_problem(23, problem_023, 4179871);
-    run_problem(24, problem_024, 2783915460);
-    run_problem(25, problem_025, 4782);
-    run_problem(55, problem_055, 249);
+    run_problem(001, problem_001, 233168);
+    run_problem(002, problem_002, 4613732);
+    run_problem(003, problem_003, 6857);
+    run_problem(004, problem_004, 906609);
+    run_problem(005, problem_005, 232792560);
+    run_problem(006, problem_006, 25164150);
+    run_problem(007, problem_007, 104743);
+    run_problem(008, problem_008, 23514624000);
+    run_problem(009, problem_009, 31875000);
+    run_problem(010, problem_010, 142913828922);
+    run_problem(011, problem_011, 70600674);
+    run_problem(012, problem_012, 76576500);
+    run_problem(013, problem_013, 5537376230);
+    run_problem(014, problem_014, 837799);
+    run_problem(015, problem_015, 137846528820);
+    run_problem(016, problem_016, 1366);
+    run_problem(017, problem_017, 21124);
+    run_problem(018, problem_018, 1074);
+    run_problem(019, problem_019, 171);
+    run_problem(020, problem_020, 648);
+    run_problem(021, problem_021, 31626);
+    run_problem(022, problem_022, 871198282);
+    run_problem(023, problem_023, 4179871);
+    run_problem(024, problem_024, 2783915460);
+    run_problem(025, problem_025, 4782);
+    run_problem(027, problem_027, 4782);
+    run_problem(055, problem_055, 249);
 }

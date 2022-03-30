@@ -1,10 +1,10 @@
 use std::collections::HashSet;
 
-fn is_abundant(n: &u64) -> bool {
+fn is_abundant(n: &i128) -> bool {
     let n = *n;
     let mut sum = 1;
 
-    let sqrt_n = (n as f64).sqrt() as u64;
+    let sqrt_n = (n as f64).sqrt() as i128;
     for m in 2..=sqrt_n {
         if n % m == 0 {
             sum += m;
@@ -21,8 +21,8 @@ fn is_abundant(n: &u64) -> bool {
 }
 
 #[allow(dead_code)]
-pub fn problem_023() -> u64 {
-    let h: HashSet<u64> = (2..=28123).filter(is_abundant).collect();
+pub fn problem_023() -> i128 {
+    let h: HashSet<i128> = (2..=28123).filter(is_abundant).collect();
     let mut sum = 0;
 
     'outer: for n in 1..=28123 {

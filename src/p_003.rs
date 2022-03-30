@@ -1,6 +1,6 @@
 use std::cmp::max;
 
-fn is_prime(n: u64) -> bool {
+fn is_prime(n: i128) -> bool {
     if n == 2 {
         return true;
     }
@@ -8,7 +8,7 @@ fn is_prime(n: u64) -> bool {
         return false;
     }
 
-    let n_int_sqrt = max((n as f64).sqrt() as u64, 3);
+    let n_int_sqrt = max((n as f64).sqrt() as i128, 3);
 
     for i in (3..=n_int_sqrt).step_by(2) {
         if n % i == 0 {
@@ -19,9 +19,9 @@ fn is_prime(n: u64) -> bool {
 }
 
 #[allow(dead_code)]
-pub fn problem_003() -> u64 {
-    let mut n: u64 = 600851475143;
-    let mut found_primes: Vec<u64> = vec![2, 3];
+pub fn problem_003() -> i128 {
+    let mut n: i128 = 600851475143;
+    let mut found_primes: Vec<i128> = vec![2, 3];
 
     'outer: while n != 1 {
         for p in &found_primes {
@@ -31,7 +31,7 @@ pub fn problem_003() -> u64 {
             }
         }
 
-        let mut i = found_primes.last().unwrap() + 2;
+        let mut i: i128 = found_primes.last().unwrap() + 2;
         loop {
             if is_prime(i) && n % i == 0 {
                 found_primes.push(i);

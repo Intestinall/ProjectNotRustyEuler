@@ -1,5 +1,5 @@
 #[allow(dead_code)]
-pub fn problem_002() -> u64 {
+pub fn problem_002() -> i128 {
     let mut a = 1;
     let mut b = 2;
 
