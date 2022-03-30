@@ -12,7 +12,7 @@ fn reverse(n: u128) -> u128 {
 }
 
 #[allow(dead_code)]
-pub fn problem_055() -> i128 {
+pub fn problem_055() -> i64 {
     let mut c = 0;
 
     'outer: for mut n in 1..10_000 {

@@ -3,7 +3,7 @@ use num_traits::One;
 use std::mem::replace;
 
 #[allow(dead_code)]
-pub fn problem_025() -> i128 {
+pub fn problem_025() -> i64 {
     let mut index = 2;
     let mut f0: BigUint = One::one();
     let mut f1: BigUint = One::one();

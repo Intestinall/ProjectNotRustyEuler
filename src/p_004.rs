@@ -2,8 +2,8 @@ use itertools::Itertools;
 use std::cmp::Reverse;
 
 #[allow(dead_code)]
-pub fn problem_004() -> i128 {
-    let mut vec: Vec<(i128, i128)> = (100..1000).rev().tuple_combinations().collect();
+pub fn problem_004() -> i64 {
+    let mut vec: Vec<(i64, i64)> = (100..1000).rev().tuple_combinations().collect();
     vec.sort_unstable_by_key(|t| Reverse(t.0 + t.1));
 
     for (a, b) in vec {

@@ -1,10 +1,10 @@
 use std::collections::HashSet;
 
-fn get_all_divisors(n: i128) -> Vec<i128> {
+fn get_all_divisors(n: i64) -> Vec<i64> {
     let mut v = Vec::new();
     v.push(1);
 
-    let sqrt_n = (n as f64).sqrt() as i128;
+    let sqrt_n = (n as f64).sqrt() as i64;
     for m in 2..=sqrt_n {
         if n % m == 0 {
             v.push(m);
@@ -18,7 +18,7 @@ fn get_all_divisors(n: i128) -> Vec<i128> {
 }
 
 #[allow(dead_code)]
-pub fn problem_021() -> i128 {
+pub fn problem_021() -> i64 {
     let mut seen = HashSet::new();
 
     for a in 1..10000 {

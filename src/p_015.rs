@@ -1,4 +1,4 @@
-fn comb(n: i128, k: i128) -> i128 {
+fn comb(n: i64, k: i64) -> i64 {
     if k == 0 {
         1
     } else if k > n / 2 {
@@ -9,7 +9,7 @@ fn comb(n: i128, k: i128) -> i128 {
 }
 
 #[allow(dead_code)]
-pub fn problem_015() -> i128 {
+pub fn problem_015() -> i64 {
     let k = 20;
     let n = k * 2;
     comb(n, k)

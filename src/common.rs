@@ -1,4 +1,4 @@
-pub fn sieve_of_eratosthenes(n: usize) -> Vec<i128> {
+pub fn sieve_of_eratosthenes(n: usize) -> Vec<i64> {
     let mut a: Vec<bool> = vec![true; n as usize];
     a[0] = false;
     a[1] = false;
@@ -14,6 +14,6 @@ pub fn sieve_of_eratosthenes(n: usize) -> Vec<i128> {
     a.iter()
         .enumerate()
         .filter(|(_, b)| **b == true)
-        .map(|(a, _)| a as i128)
-        .collect::<Vec<i128>>()
+        .map(|(a, _)| a as i64)
+        .collect::<Vec<i64>>()
 }
