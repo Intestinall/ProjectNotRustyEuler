@@ -1,3 +1,4 @@
+mod common;
 mod p_001;
 mod p_002;
 mod p_003;
@@ -114,6 +115,6 @@ fn main() {
     run_problem(023, problem_023, 4179871);
     run_problem(024, problem_024, 2783915460);
     run_problem(025, problem_025, 4782);
-    run_problem(027, problem_027, 4782);
+    run_problem(027, problem_027, -59231);
     run_problem(055, problem_055, 249);
 }

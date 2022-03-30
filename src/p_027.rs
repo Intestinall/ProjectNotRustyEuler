@@ -1,16 +1,25 @@
-fn is_prime(n: i128) -> bool {
-    let n_int_sqrt = (n as f64).sqrt() as i128;
-
-    for i in (3..=n_int_sqrt).step_by(2) {
-        if n % i == 0 {
-            return false;
-        }
-    }
-    true
-}
+use crate::common::sieve_of_eratosthenes;
+use std::collections::HashSet;
 
 #[allow(dead_code)]
 pub fn problem_027() -> i128 {
-    let _v: Vec<i128> = (11..10_000).step_by(2).filter(|n| is_prime(*n)).collect();
-    0
+    let all_primes_below_1000: HashSet<i128> = sieve_of_eratosthenes(1000).into_iter().collect();
+
+    let (mut max_consecutive, mut max_a, mut max_b) = (0, 0, 0);
+    for a in -1000..1000 {
+        for b in -1000..1000 {
+            for n in 0i128..1000 {
+                let r = n * n + a * n + b;
+                if !all_primes_below_1000.contains(&r) {
+                    if n > max_consecutive {
+                        max_consecutive = n;
+                        max_a = a;
+                        max_b = b;
+                    }
+                    break;
+                }
+            }
+        }
+    }
+    max_a * max_b
 }
